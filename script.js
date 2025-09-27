@@ -21,6 +21,8 @@ function getHumanChoice(){
     return choice;
 }
 
+/*old version of playRound with nested if statements
+
 function playRound(human, computer){
     if(human==computer){
         roundDraw(computer)
@@ -36,6 +38,16 @@ function playRound(human, computer){
         if(computer=="rock"){
             roundLose(computer)
         } else(roundWin(computer))
+    }
+}*/
+
+function playRound(human, computer){
+    if(human===computer){
+        roundDraw(computer);
+    }else if((human==="rock"&&computer==="scissors")||(human==="paper"&&computer==="rock")||(human==="scissors"&&computer==="paper")){
+        roundWin(computer);
+    }else{
+        roundLose(computer);
     }
 }
 
